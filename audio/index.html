@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body {
+				background-color: #dedede;
+				font-size: 12px;
+			}
+			#fileWrapper{
+				font-size: 22px;
+			}
+			.base {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 18em;
+				height: 9em;
+				margin: -13em;
+				padding: 3em;
+				transform: rotateX(45deg) rotateZ(45deg);
+				transform-style: preserve-3d;
+			}
+			
+			.cube,
+			.cube:after,
+			.cube:before {
+				position: absolute;
+				width: 3em;
+				height: 3em;
+				content: '';
+				float: left;
+			}
+			
+			/* Top */
+			.cube {
+				position: relative;
+				background-color: #05afd1;
+				transform: translateZ(5em);
+				transform-style: preserve-3d;
+				transition: .25s;
+				box-shadow: 22em 22em 1.5em rgba(0, 0, 0, 0.1);
+				animation: anim 2s infinite;
+			}
+			.cube:after {
+				background-color: #049dbc;
+				transform: rotateX(-90deg) translateY(3em);
+				transform-origin: 100% 100%;
+			}
+			.cube:before {
+				background-color: #048ca7;
+				transform: rotateY(90deg) translateX(3em);
+				transform-origin: 100% 0;
+			}
+			</style>
+	</head>
+	<body>
+		 <div id="wrapper">
+            <div id="fileWrapper" class="file_wrapper">
+                <div id="info">
+                    	audio_API做出来的沙雕效果
+                    	
+                </div>
+                <br>
+                <br>
+                <label for="uploadedFile">拖拽或选择文件上传</label>
+                <input type="file" id="uploadedFile"></input>
+            </div>
+            <div id="visualizer_wrapper">
+                <div class='base'>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+					<div class='cube'></div>
+				</div>
+            </div>
+       </div>
+        <script type="text/javascript" src="html5_audio_visualizer.js"></script>
+	</body>
+</html>

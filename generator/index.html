@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>generator</title>
+		<style>
+			body{
+				font-family: "sans-serif";
+			}
+			#text{
+				position: absolute;
+				left: 50%;
+				top: 20%;
+				transform:translate(-50%,-50%);
+				
+			}
+			
+			#ball{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform:translate(-50%,-50%);
+				width:50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: black;
+				transition: transform 0.5s;
+			}
+			
+			#button{
+				position: absolute;
+				left: 50%;
+				top: 80%;
+				transform:translate(-50%,-50%);
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				color: white;
+				background-color: #99ccff;
+				border-radius: 20px;
+				cursor: pointer;
+			}
+			#button:hover{
+				transform:translate(-50%,-50%) scale(1.1);
+			}
+			#button:active{
+				background-color: #80bfff;
+				transform:translate(-50%,-50%);
+			}
+		</style>
+	</head>
+		
+	<body>
+		<div id="text">这是一个球</div>
+		<div id="ball"></div>
+		<div id="button">点我一下</div>
+		<script src="script.js"></script>
+	</body>
+</html>

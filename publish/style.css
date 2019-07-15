@@ -1,0 +1,70 @@
+.channel{
+	display: flex;
+	width: 90%;
+	margin: 20px 5%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border: 1px solid black;
+}
+.text{
+	display: inline-block;
+	margin: 8px 0;
+	padding: 0 5px;
+	font-size: 20px;
+	border: 1px solid black;
+	border-radius: 8px 0 0 8px;
+	cursor: default;
+}
+.add{
+	display: inline-block;
+	margin: 8px 0;
+	margin-left: -6px;
+	padding: 0 4px;
+	font-size: 20px;
+	border: 1px solid black;
+	border-radius: 0 8px 8px 0;
+	cursor: default;
+}
+.remove{
+	display: inline-block;
+	margin: 8px 0;
+	margin-left: -1px;
+	margin-right: 20px;
+	padding: 0 4px;
+	font-size: 20px;
+	border: 1px solid black;
+	border-radius: 0 8px 8px 0;
+	cursor: default;
+}
+.text:active{
+	background-color: gray;
+}
+.add:active{
+	background-color: gray;
+}
+.remove:active{
+	background-color: gray;
+}
+.user{
+	border: 1px solid black;
+	padding: 0 20px;
+	margin: 0 5% 20px;
+}
+h2{
+	display: inline-block;
+	
+}
+.selected{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+.news{
+	height: 400px;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	border: 1px solid black;
+	overflow: auto;
+}

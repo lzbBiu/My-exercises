@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> 观察者模式 </title>
+		<style>
+			html,body,div{
+				margin: 0;
+				padding: 0;
+			} 
+			#container{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			#container>div{
+				width: 100px;
+				height: 100px;
+				margin: 50px;
+				background-color: black;
+				border-radius: 50%;
+				transition: transform 0.2s;
+			}
+			#container>div:first-child:hover{
+				transform: scale(1.2);
+				transition: transform 0.2s;
+				
+			}
+			.follow{
+				transform: scale(1.2);
+				transition: transform 0.2s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div></div>
+			<div></div>
+		</div>
+		<script src="script.js"></script>	
+	</body>
+	
+</html>

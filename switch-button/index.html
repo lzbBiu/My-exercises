@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>切换按钮</title>
+		<meta charset="utf-8">
+		<style>
+			.button{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 300px;
+				height: 150px;
+				border-radius: 75px;
+				border: 1px solid black;
+				overflow: hidden;
+				transform: translate(-50%,-50%);
+			}
+			.main{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 150px;
+				height: 150px;
+				background-color: yellow;
+				border-radius: 75px;
+				transform: translate(1%,-50%) ;
+				transition: transform 0.2s ease-out;
+			}
+			.line1{
+				display: inline-block;
+				width:15px;
+				height:60px;
+				background-color:green;
+				border-radius: 30px;
+				transform: rotate(-40deg);
+				transition: transform 0.2s ease-out;
+			}
+			.line2{
+				display: inline-block;
+				width:15px;
+				height:100px;
+				background-color: green;
+				border-radius: 30px;
+				transform: translate(151%,4%) rotate(40deg);
+				transition: transform 0.2s ease-out;
+			}
+			.wrap{
+				transform: translate(25%,20%);
+			}
+			input{
+				display:none;
+			}
+			input:checked+div+div+div{
+				transform: translate(-101%,-50%) rotate(180deg);
+				transition: transform 0.2s ease-out;
+			}
+			input:checked + div+div+div .line1{
+				height:100px;
+				background-color:red;
+				transform: translate(180%,0%) rotate(40deg);
+				transition: transform 0.2s ease-out;
+				
+			}
+			input:checked + div+div+div .line2{
+				background-color:red;
+				transform: translate(50%,0%) rotate(-40deg);
+				transition: transform 0.2s ease-out;
+			}
+			.green{
+				width: 500px;
+				height: 200px;
+				background-color: green;
+				transform: translate(-50%,-10%);
+				transition: transform 0.2s ease-out;
+			}
+			.red{
+				width: 500px;
+				height: 200px;
+				background-color: red;
+				transform: translate(50%,-110%);
+				transition: transform 0.2s ease-out;
+				
+			}
+			input:checked + div{
+				transform: translate(-80%,-10%);
+				transition: transform 0.2s ease-out;
+			}
+			input:checked + div+div{
+				transform: translate(10%,-110%);
+				transition: transform 0.2s ease-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="button">
+			<label>
+				<input type="checkbox">
+				<div class="green"></div>
+				<div class="red"></div>
+				<div class="main">
+					<div class="wrap">
+						<div class="line1"></div>
+						<div class="line2"></div>
+					</div>
+				</div>
+			</label>	
+		</div>	
+	</body>
+</html>

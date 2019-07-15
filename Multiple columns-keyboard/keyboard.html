@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>多列-键盘布局</title>
+    <style>
+        .grid-container {
+        	position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            background-color: ghostwhite;
+            max-width: 1200px;
+            transform: translate(-50%, -50%);
+            outline:  1px solid gray;;
+            box-shadow: 2px 2px 5px #888888;
+        }
+
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+		.grid-container *{
+			box-sizing: border-box;
+		    margin:0.25%;
+		    padding: 2%;
+		    text-align: center;
+		}
+		.row {
+			padding:0;
+		}
+		.row *:active{
+			background-color: #dbdbdb;
+			box-shadow: 0px 0px 0px #888888;
+		}
+        [class*='col-'] {
+            float: left;
+            min-height: 1px;
+            background-color: #FFDCDC;
+            border-radius:5px;
+            box-shadow: 1px 1px 2px #888888;
+        }
+
+        .col-2 {
+            width: 6.2%;
+        }
+
+        .col-3 {
+            width: 9.3%;
+        }
+
+        .col-4 {
+            width: 12.4%;
+        }
+
+        .col-5 {
+            width: 15.5%;
+        }
+
+        .col-6 {
+            width: 18.6%;
+        }
+
+        .col-10 {
+            width: 40.2%;
+        }
+		#caps{
+			width: 9.8%;
+		}
+		#shift1{
+			width: 12.9%;
+		}
+		#shift2{
+			width: 19.1%;
+		}
+        /*-- 列的额外内容样式 --*/
+        [class*='col-']>p {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            color: black;
+            background-color: #FFC2C2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="row">
+            <div class="col-2">~</div>
+            <div class="col-2">1</div>
+            <div class="col-2">2</div>
+            <div class="col-2">3</div>
+            <div class="col-2">4</div>
+            <div class="col-2">5</div>
+            <div class="col-2">6</div>
+            <div class="col-2">7</div>
+            <div class="col-2">8</div>
+            <div class="col-2">9</div>
+            <div class="col-2">0</div>
+            <div class="col-2">-</div>
+            <div class="col-2">+</div>
+            <div class="col-4">Backspace</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Tab</div>
+            <div class="col-2">Q</div>
+            <div class="col-2">W</div>
+            <div class="col-2">E</div>
+            <div class="col-2">R</div>
+            <div class="col-2">T</div>
+            <div class="col-2">Y</div>
+            <div class="col-2">U</div>
+            <div class="col-2">I</div>
+            <div class="col-2">O</div>
+            <div class="col-2">P</div>
+            <div class="col-2">[</div>
+            <div class="col-2">]</div>
+            <div class="col-3">\</div>
+        </div>
+        <div class="row">
+            <div class="col-3" id="caps">Caps</div>
+            <div class="col-2">A</div>
+            <div class="col-2">S</div>
+            <div class="col-2">D</div>
+            <div class="col-2">F</div>
+            <div class="col-2">G</div>
+            <div class="col-2">H</div>
+            <div class="col-2">J</div>
+            <div class="col-2">K</div>
+            <div class="col-2">L</div>
+            <div class="col-2">;</div>
+            <div class="col-2">“</div>
+            <div class="col-5">Enter</div>
+        </div>
+        <div class="row">
+            <div class="col-4" id="shift1">Shift</div>
+            <div class="col-2">Z</div>
+            <div class="col-2">X</div>
+            <div class="col-2">C</div>
+            <div class="col-2">V</div>
+            <div class="col-2">B</div>
+            <div class="col-2">N</div>
+            <div class="col-2">M</div>
+            <div class="col-2">,</div>
+            <div class="col-2">.</div>
+            <div class="col-2">/</div>
+            <div class="col-6" id="shift2">Shift</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Ctrl</div>
+            <div class="col-2">Win</div>
+            <div class="col-3">Alt</div>
+            <div class="col-10" id="space">Space</div>
+            <div class="col-3">Alt</div>
+            <div class="col-2">Win</div>
+            <div class="col-2">File</div>
+            <div class="col-3">Ctrl</div>
+        </div>
+    </div>
+    <sc>
+</body>
+</html>

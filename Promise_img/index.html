@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title></title>
+		<style>
+			#container{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				max-height: 500px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			#loading{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				width: 100px;
+				height: 100px;
+				border: 4px solid #00ffff;
+				border-radius: 50%;
+				
+			}
+			#loading:before{
+				display: block;
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #00ffff;
+				transform: translate(20%,20%);
+			}
+			@keyframes rotate{
+				from {transform: rotate(360deg);}
+			}
+			#rotate{
+				animation: rotate 1s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id= 'rotate'>
+				<div id='loading'></div>
+			</div>	
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>卡牌翻转</title>
+		<style>
+			@keyframes rotateBack{
+				0% {transform: translate(-50%,-50%) rotateY(-180deg);}
+				100% {transform: translate(-50%,-50%) rotateY(180deg);}
+			}
+			@keyframes rotateFront{
+				0% {transform: rotateY(0deg);}
+				100% {transform: rotateY(360deg);}
+			}
+			.wrap{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 248px;
+				height: 368px;
+				transform: translate(-50%,-50%);
+				/*为父元素指定开启子元素透视效果*/
+				-webkit-perspective: 700;
+			}
+			.front{
+				width: 248px;
+				height: 368px;
+				background-image: url(bg.png);
+				background-size: 248px 368px;
+				backface-visibility: hidden;
+				transform: rotateY(0deg);
+				animation: rotateFront 5s linear infinite;
+			}
+			.back{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 248px;
+				height: 368px;
+				background-image: url(content.png);
+				background-size: 248px 368px;
+				backface-visibility: hidden;
+				transform: translate(-50%,-50%) rotateY(-180deg);
+				animation: rotateBack 5s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>	
+	</body>
+</html>
