@@ -1,0 +1,73 @@
+{ sprite1name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 0,
+      sy: 0,
+  },
+  sprite2name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 75,
+      sy: 0,
+  },
+  sprite3name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 150,
+      sy: 0,
+  },
+  sprite4name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 225,
+      sy: 0,
+  },
+  sprite5name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 300,
+      sy: 0,
+  },
+  sprite6name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 375,
+      sy: 0,
+  },
+  sprite7name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 450,
+      sy: 0,
+  },
+  sprite8name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 525,
+      sy: 0,
+  },
+  sprite9name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 600,
+      sy: 0,
+  },
+  sprite10name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 675,
+      sy: 0,
+  },
+  sprite11name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 750,
+      sy: 0,
+  },
+  sprite12name: {
+      tilew: 75,
+      tileh: 182,
+      sx: 825,
+      sy: 0,
+  },
+}
