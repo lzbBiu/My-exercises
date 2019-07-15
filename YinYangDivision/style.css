@@ -1,0 +1,315 @@
+/*初始化*/
+html,body,div,ul,li,img,small,input,canvas,span{
+	margin: 0;
+	padding: 0;
+	
+}
+ html, body {
+   width: 100%;
+   height: 100%;
+   overflow:hidden;
+   overflow-y:auto;
+}
+body{
+	font-family: 'Microsoft Yahei';
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    user-select:none;
+	
+}
+input{
+	border: 0px;
+	background: none;  
+	outline: none;  
+}
+/*版本说明*/
+.copyright{
+	display: none;
+}
+.copyright+a{
+	float: left;
+}
+label>h1{
+	position: relative;
+	z-index: 3;
+	display: none;
+	float: left;
+	font-size: 12px;
+	transition: opacity 0.2s;
+}
+.copyright:checked+a+h1{
+	position: relative;
+	z-index: 3;
+	display: block;
+	float: left;
+	margin-left:5px;
+	transition: display 2s;
+}
+/*抽卡*/
+.draw-btn{
+	position: fixed;
+	left: 50%;
+	top: 90%;
+	display: block;
+	width: 140px;
+	height: 80px;
+	margin: 0 auto;
+	line-height:80px;
+	border-radius: 80px;
+	font-size: 16px;
+    color: #333;
+	background: green; 
+	transform: translate(-50%,-50%);
+}
+/*抽卡-画板*/
+.draw-canvas{
+	position:fixed;
+    margin:auto;
+    left:0;
+    right:0;
+    top:-100px;
+    bottom:0;
+	background-image: url('bg/lp.png');
+}
+/*抽卡-底图*/
+.hide{
+	display: none;
+}
+.draw-bg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	background: black;
+	transform: translate(-50%,-50%);
+}
+.draw-bf{
+	position: absolute;
+    left: 50%;
+	top: 50%;
+    z-index: 4;
+    width: 54px;
+    height: 297px;
+	transform: translate(-800%,-80%);
+}
+.draw-bf-grade{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%,-50%);
+}
+.draw-bf-name{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	z-index: 4;
+	font-size: 30px;
+    font-weight: 700;
+    color: #333;
+	letter-spacing: 5px;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	transform: translate(-50%,-50%);
+}
+.draw-content-img{
+	position: absolute;
+	left: 52%;
+	top: 50%;
+	z-index: 1;
+	transform: translate(-50%,-50%);
+}
+.draw-content-bg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1920px;
+	height: 694px;
+	transform: translate(-50%,-50%);
+}
+.draw-colse-btn{
+	position: absolute;
+	left: 88%;
+	top: 22%;
+	z-index: 4;
+	width: 50px;
+	height: 50px;
+	background-image: url('bg/cha.png');
+	background-size: 50px 50px;
+	transform: translate(-50%,-50%);
+}
+/* moublie */
+@media screen and (max-width:1024px){
+	/* 抽卡 */
+	.draw-bf{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 4;
+		width: 54px;
+		height: 297px;
+		transform: translate(-300%,-80%);
+	}
+	.draw-content-img{
+		position: absolute;
+		left: 52%;
+		top: 50%;
+		z-index: 1;
+		transform: translate(-50%,-50%) scale(0.8,0.8);
+	}
+	.draw-content-bg{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 1920px;
+		height: 694px;
+		transform: translate(-50%,-50%) scale(0.8,0.8);
+	}
+	.draw-colse-btn{
+		position: absolute;
+		left: 88%;
+		top: 24%;
+		z-index: 4;
+		width: 30px;
+		height: 30px;
+		background-image: url('bg/cha.png');
+		background-size: 30px 30px;
+		transform: translate(-50%,-50%);
+	}
+	/*背包*/
+	.knapsack-clear-btn{
+		display: inline-block;
+		width: 100px;
+		height: 40px;
+		line-height:40px;
+		margin-top: -6px;
+		border-radius: 10px;
+		color: 	#333;
+		background: green;  
+	}
+}
+/*加载动画*/
+.draw-load{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	transform: translate(-50%,-50%);
+	box-shadow: 12px 12px 20px #bbb;
+}
+.draw-load>.draw-loading-content{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	background: linear-gradient(to right, black 50%, white 50%);
+	transform: translate(-50%,-50%);
+	animation: rotate 5s linear infinite;
+}
+.draw-load>.draw-loading-content::before{
+	display:block;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border: 50px solid black;
+	border-radius:75px;
+	transform: translate(50%,0%);
+}
+.draw-load>.draw-loading-content::after{
+	display:block;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border: 50px solid white;
+	border-radius:75px;;
+	transform: translate(50%,0%);
+}
+@keyframes rotate{
+	0%	{transform: translate(-50%,-50%) rotate(0deg);}
+	100%	{transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+/*背包*/
+.knapsack{
+	position: relative;
+	z-index: 2;
+	float: right;
+	min-width: 280px;
+	max-width: 540px;
+	width: 40%;	
+	height: 80%;
+	min-height: 500px;
+	margin-top: 20px;
+	margin-right:-540px;
+	padding-top: 10px;
+	text-align: center;
+	background-color: gray;
+	transition: margin, 0.2s;
+}
+.knapsack-trigger{
+	float: left;
+	width: 80px;
+	height: 40px;
+	margin-top: 50px;
+	margin-left: -80px;
+	line-height: 40px;
+	text-align: center;
+	background-color: gray;
+	border-radius: 20px 0 0 20px;
+	cursor:pointer;
+}
+.knapsack-statistic{
+	text-align: center;
+}
+.knapsack-content{
+	width: 90%;
+	height: 80%;
+	margin: 20px auto;
+	overflow: auto;
+	background-color: green;
+	list-style: none;
+}
+.knapsack-content>li{
+	width: 100%;
+	height: 52px;
+	margin: 5px 0;
+	line-height: 52px;
+	text-align: center;
+	background: url('bg/bfbody.png') repeat-x;
+}
+.knapsack-content>li>img{
+	float: left;
+	vertical-align: center;
+}
+.knapsack-content>li>span{
+	font-size: 20px;
+    font-weight: 700;
+    color: #333;
+	vertical-align: center;
+}
+.knapsack-content>li>small{
+	float: right;
+	margin-right: 5px;
+	font-size: 20px;
+    color: #333;
+	vertical-align: center;
+}
+.knapsack-clear-btn{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height:40px;
+	margin-top: -12px;
+	border-radius: 10px;
+	font-size: 16px;
+    color: #333;
+	background: green;  
+}

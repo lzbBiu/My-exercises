@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>仿阴阳师抽卡</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- 版本说明 -->
+		<label>
+			<input type="checkbox" class="copyright">
+			<a>版本说明:</a>
+			<h1>图片资料来源《阴阳师手游官网》:<br>
+				<a href="http://yys.163.com/index.html">http://yys.163.com</a><br>
+				如对游戏内容感兴趣请下载游戏自行体验。<br>
+				本网站用于开发学习，不做他用。<br>
+				个人github:<br>
+				<a href="https://github.com/lzbBiu">https://github.com/lzbBiu</a>
+			</h1>
+		</label>
+		
+		<!-- 抽卡-按钮 -->
+		<input type="button" class="draw-btn" value="抽卡">
+		<!-- 抽卡-画板 -->
+		<canvas class="draw-canvas" width="0" height="0"></canvas>
+		
+		<!--  加载动画 -->
+		<div>
+			<div class="draw-loading-content"></div>
+		</div>
+		
+		<!-- 抽卡-动画 -->
+		<div class="draw-bg hide">
+			<div class="draw-bf">
+				<img class="draw-bf-grade">
+				<span class="draw-bf-name"> </span>
+			</div>
+			<img class="draw-content-img">
+			<div class="draw-content-bg"></div>
+			<div class="draw-colse-btn"></div>
+		</div>
+		
+		<!-- 背包 -->
+		<div class="knapsack">
+			<div class="knapsack-trigger "></div>
+			<div class="knapsack-statistic">一共抽了 <span class="knapsack-statistic-record "> 0 </span> 次</div>
+			<div class="knapsack-content"></div>
+			<input type="button" class="knapsack-clear-btn" value="清除数据">
+		</div>
+	
+		<script src="script.js"></script>
+	</body>
+</html>	
