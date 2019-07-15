@@ -1,1 +1,0 @@
-genetator封装多个异步，由Thunk自动执行
