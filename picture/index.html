@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<style>
+			html,body,div,ul,li,span{
+				margin: 0;
+				padding: 0;
+			}
+			#contains{
+				text-align: center;
+			}
+			#contains>ul{
+				display: inline-block;
+				list-style: none;
+			}
+			#contains li{
+				box-sizing: border-box;
+				float: left;
+				border: 6px solid white;
+			}
+			#contains img:hover{
+				transform: translate(-2%,-2%);
+			}
+			.mask{
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				width: 100%;
+				background-color: gray;
+				opacity: 0.6;
+			}
+			.show{
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				max-height: 80%;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="contains"></div>
+		<div id ="mask"></div>
+		<div id ="show"></div>
+		<script src='picture.js'></script>
+		<script src='enlarge.js'></script>
+	</body>	
+<html>
